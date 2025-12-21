@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "composition.css",
+	"sources": [
+		"../../sass/components/composition.sass"
+	],
+	"sourcesContent": [
+		".composition {\n    &__photo {\n        width: 72%;\n        &__n1 {}\n        &__n2 {}\n        &__n3 {} } }\n"
+	],
+	"names": [],
+	"mappings": ";AACK,AAAD,mBAAQ,CAAC;EACL,KAAK,EAAE,GAAG,GAGA"
+}
