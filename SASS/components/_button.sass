@@ -1,6 +1,6 @@
 // button - link component
 .btn
-    &:link, &:visited
+    &, &:link, &:visited
         @include  style-link ($color-gray)
         position: relative
         background-color: $color-white-base
@@ -10,6 +10,7 @@
         letter-spacing: 0.25em
         border-radius: 5rem
         transition: transform .3s
+        border: none
     &:hover
         transform: translateY(-.4rem)
         box-shadow: $box-shadow
@@ -34,4 +35,12 @@
     &_animated
         animation: btnToUp 0.5s ease-out .7s
         animation-fill-mode: backwards
+
+.btn_brown
+    &, &:link, &:visited
+        background: $brown-color-dark
+        color: $color-white-base
+    &:hover
+    &::after
+        background-color: $brown-color-dark
  

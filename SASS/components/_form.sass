@@ -1,0 +1,87 @@
+.book
+    height: 50rem
+    background: linear-gradient(112deg, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.85) 55%, rgba(186,133,80,0.6) 55%, rgba(161,79,3,0.6) 100%), url(../img/contact-bg.jpg) center / cover no-repeat
+    box-shadow: $box-shadow
+    border-radius: .5rem
+    overflow: hidden
+    &__form
+        width: 60%
+        padding: 5rem
+        
+.form
+    &__group:not(:last-child)
+        margin-bottom: 1.5rem
+    
+    &__input
+        font-size: $font-size-paragraph
+        letter-spacing: .2rem
+        font-weight: 400
+        color: $color-black
+        padding: 2rem 0rem 2rem 2rem
+        background: $color-white
+        border: none
+        border-bottom: .2rem solid transparent
+        border-radius: .5rem
+        width: 75%
+        &:focus
+            outline: none
+            border-bottom: .2rem solid #66D763
+            box-shadow: $box-shadow
+        &:focus:invalid
+            border-bottom: .2rem solid #D76363
+
+    &__label
+        font-size: $font-size-paragraph
+        letter-spacing: .2rem
+        font-weight: 400
+        display: block
+        margin-top: 1rem
+        margin-left: 1.5rem
+        transition: .3s all
+
+    &__input:placeholder-shown + &__label
+        opacity: 0
+        visibility: hidden
+        transform: translateY(-1.2rem)
+    
+    &__group-radio
+        width: 40%
+        display: inline-block
+        margin-bottom: 3rem
+
+    &__input-radio
+        display: none
+
+    &__label-radio
+        cursor: pointer
+        position: relative
+        padding-left: 3rem
+    &__button-radio
+        height: 2rem
+        width: 2rem
+        border-radius: 50%
+        border: .3rem solid $brown-color-dark
+        display: block
+        position: absolute
+        left: 0
+        top: -.1rem
+        &::after
+            content: ""
+            display: block
+            height: 1rem
+            width: 1rem
+            border-radius: 50%
+            background: $brown-color-dark
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            opacity: 0
+            transition: .2s all
+           
+            
+    &__input-radio:checked ~ &__label-radio &__button-radio::after
+        opacity: 1
+        
+
+        
