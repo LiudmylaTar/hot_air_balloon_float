@@ -18,14 +18,21 @@
         z-index: 200
         text-align: center
         cursor: pointer
-
+        @include respond(tab-port)
+            height: 5rem
+            width: 5rem
     svg
         position: absolute
+        width: 6rem
+        height: 6rem
         top: 50%
         left: 50%
         transform: translate(-50%, -50%)
         transition: opacity .3s ease
         pointer-events: none
+        @include respond(tab-port)
+            width: 4rem
+            height: 4rem
 
 
     &__background
@@ -38,6 +45,10 @@
         top: 11rem
         z-index: 100
         transition: all .7s
+        @include respond(tab-port)
+            width: 3.5rem
+            height: 3.5rem
+
     &__nav
         height: 100vh
         position: fixed

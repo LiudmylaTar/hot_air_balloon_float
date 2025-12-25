@@ -3,6 +3,8 @@
     perspective: 150rem
     -moz-perspective: 150rem
     position: relative
+    @include respond(tab-port)
+            height: 55rem
     &__side
         height: 50rem
         transition: .6s all ease-out
@@ -15,6 +17,8 @@
         box-shadow: $box-shadow
         border-radius: .5rem
         overflow: hidden
+        @include respond(tab-port)
+            height: 55rem
         &_front
             
         &_back
@@ -31,6 +35,9 @@
         height: 21rem
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%)
         margin-bottom: 4.5rem
+        @include respond(tab-port)
+            height: 30rem
+            margin-bottom: 5.5rem
         &_1
             background: $brown-color-light url(./../img/2x_tour-1.jpg) center / cover no-repeat
         &_2
@@ -46,6 +53,9 @@
         position: absolute
         top: 17rem
         right: 0
+        @include respond(tab-port)
+            top: 25rem
+            font-size: 3.5rem
     &__span
         background: linear-gradient(90deg, $brown-color-light, $brown-color-dark)
         padding: 1rem 2rem .4rem
@@ -56,6 +66,8 @@
             right: 0
             padding-bottom: .6rem
             padding-top: .1rem
+            @include respond(tab-port)
+                top: 4.2rem
             
     &__descr
         ul
@@ -74,6 +86,8 @@
                     margin-bottom: 2rem
                 @include respond(tab-land)
                     font-size: 1.5rem
+                @include respond(tab-port)
+                    font-size: 2rem
     
     &__backSide-box
         position: absolute
